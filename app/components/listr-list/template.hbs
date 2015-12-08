@@ -1,0 +1,20 @@
+<h3 {{action 'toggleList'}}>Favorite Things</h3>
+
+{{#unless isHidden}}
+  {{#each items as |item|}}
+    {{listr-list/listr-item item=item}}
+  {{else}}
+    This list is empty!  Don't you like anything?
+  {{/each}}
+{{/unless}}
+
+{{yield}}
+
+
+
+
+{{!-- {{#if isHidden}}
+  <button {{action "confirm"}}>Click again to confirm</button>
+{{else}}
+  <button {{action "showConfirmation"}}>{{title}}</button>
+{{/if}} --}}
